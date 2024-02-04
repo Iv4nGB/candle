@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} title {% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
+    {#    GOOGLE ШРИФТ #}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Rubik+Moonrocks&family=Sofia+Sans+Condensed:wght@500&display=swap"
+          rel="stylesheet">
+       <meta name="viewport" content="width=390, initial-scale=0.7">
+    <link rel="stylesheet" href="{% static 'myapp/css/style.css' %}">
+    
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+
+<div class="wrapper">
+    <header class="header" id="header">
+        {#  Добавить навверх если мы хотим зафиксировать шапку      fixed-top#}
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #947a63;">
+            <div class="container-fluid">
+                <a href="{% url 'index' %}">
+                    <img class="image" alt="" src="{% static 'myapp/index/logo2.png' %}">
+                    {#                      <div>#}
+                    {#                          Candle Shop spb#}
+                    {#                      </div>#}
+                </a>
+
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Главная</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'catalog' %}">Каталог</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'about_products' %}">О нашей продукции</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'aroma_oil' %}">Аромамасла</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'master_class' %}">Мастер класс</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'gift_certificate' %}">Подарочный
+                            сертификат</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'reviews' %}">Отзывы</a></li>
+                                           </ul>
+                                   </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="content">
+            {% block main %}{% endblock %}
+        </div>
+                <ul class="social-icons alex">
+            <li class="nav-item insta">
+                <a href="https://www.instagram.com/candle_shop_spb?igsh=MTMyN3V6N2h2eXUw"><img
+                        src='{% static 'myapp/index/insta.png' %}'
+                        alt=""/></a>
+            </li>
+            <li class="nav-item">
+                <a href="https://vk.com/club161812110"><img src='{% static 'myapp/index/vk.png' %}'
+                                                            alt=""/></a>
+            </li>
+            <li class="nav-item">
+                <a href="https://t.me/candle_shop_spb"><img src='{% static 'myapp/index/telegram-logo.png' %}'
+                                                          alt=""/></a>
+            </li>
+        </ul>
+    </main>
+
+    <footer class="footer">
+        <div class="ozone">
+            Мы рады сообщить Вам, что наборы "Сделай Сам" Вы можете приобрести на <a target="_blank"
+                                                                                     href="https://www.ozon.ru/search/?deny_category_prediction=true&from_global=true&text=%D0%9D%D0%B0%D0%B1%D0%BE%D1%80+%D0%B4%D0%BB%D1%8F+%D0%B8%D0%B7%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F+%D1%81%D0%B2%D0%B5%D1%87%D0%B5%D0%B9&product_id=990669935">
+            Ozon </a>.
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Candle Shop SPB {% endblock %}
+{% block head %}
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'myapp/index/indexICO.png' %}"/>
+{% endblock %}
+
+{% block main %}
+    <h4>
+        Каталог продукции
+    </h4>
+    <div class="flex-container product-container">
+        <figure>
+            <img src="{% static 'myapp/foto_product/1.jpg' %}" alt="img">
+            <figcaption>Cвеча в деревянной форме</figcaption>
+        </figure>
+        <figure>
+            <img src="{% static 'myapp/foto_product/2.jpg' %}" alt="img">
+            <figcaption>Свеча в кокосовой форме</figcaption>
+        </figure>
+        <figure>
+            <img src="{% static 'myapp/foto_product/3.jpg' %}" alt="img">
+            <figcaption>Формовые свечи</figcaption>
+        </figure>
+        <figure>
+            <img src="{% static 'myapp/foto_product/5.jpg' %}" alt="img">
+            <figcaption>Арома Саше</figcaption>
+        </figure>
+        <figure>
+            <img src="{% static 'myapp/foto_product/6.jpg' %}" alt="img">
+            <figcaption>Арома диффузор</figcaption>
+        </figure>
+        <figure>
+            <img src="{% static 'myapp/foto_product/7.jpg' %}" alt="img">
+            <figcaption>Благовония Пало Санто</figcaption>
+        </figure>
+        <figure>
+            <img src="{% static 'myapp/foto_product/4.jpg' %}" alt="img">
+            <figcaption>Формовые свечи</figcaption>
+        </figure>
+        <figure>
+            <img src="{% static 'myapp/foto_product/8.jpg' %}" alt="img">
+            <figcaption>Набор "Сделай Сам"</figcaption>
+        </figure>
+    </div>
+{% endblock %}

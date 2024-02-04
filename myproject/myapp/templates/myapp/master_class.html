@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Candle Shop SPB {% endblock %}
+{% block head %}
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'myapp/index/indexICO.png' %}"/>
+{% endblock %}
+
+{% block main %}
+    <h4>
+        Мастер класс
+    </h4>
+    <div class="flex-index index-container">
+        <figure class="index-figure">
+            <img src="{% static 'myapp/foto_master_class/1.jpg' %}" alt="img">
+            <figcaption>Мастер класс</figcaption>
+        </figure>
+        <figure class="index-figure two-img">
+            <img src="{% static 'myapp/foto_master_class/2.jpg' %}" alt="img">
+            <figcaption>Разогреваем воск</figcaption>
+        </figure>
+        <figure class="index-figure">
+            <img src="{% static 'myapp/foto_master_class/3.jpg' %}" alt="img">
+            <figcaption>В работе</figcaption>
+        </figure>
+        <figure class="index-figure two-img">
+            <img src="{% static 'myapp/foto_master_class/4.jpg' %}" alt="img">
+            <figcaption>Фиксация фитиля</figcaption>
+        </figure>
+        <figure class="index-figure tree-img">
+            <img src="{% static 'myapp/foto_master_class/5.jpg' %}" alt="img">
+            <figcaption>Украшаем готовое изделие</figcaption>
+        </figure>
+        <figure class="index-figure tree-img">
+            <img src="{% static 'myapp/foto_master_class/6.jpg' %}" alt="img">
+            <figcaption>Участие в Мастер-классе по предварительной записи</figcaption>
+        </figure>
+    </div>
+    <div class="form-group">
+        <form class="form-group" action="{% url 'master_class' %}" method="post" enctype="multipart/form-data">
+                <div class="description-form">
+                    <h3>
+                        Оставить заявку на мастер-класс
+                    </h3>
+                </div>
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="send">
+                    <input type="submit" value="Отправить">
+                </div>
+            <div class="description-order">
+                <p>
+                    * После отправки формы, наш администратор свяжется с Вами
+                </p>
+            </div>
+        </form>
+    </div>
+{% endblock %}

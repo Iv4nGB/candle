@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Candle Shop SPB {% endblock %}
+{% block head %}
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'myapp/index/indexICO.png' %}"/>
+{% endblock %}
+
+{% block main %}
+    <h4>
+        О нашей продукции
+    </h4>
+    <div class="flex-index index-container">
+        <figure class="index-figure">
+            <img src="{% static 'myapp/foto_reviews/1.jpg' %}" alt="img">
+            <figcaption>Хлопковый фитиль</figcaption>
+        </figure>
+        <figure class="index-figure two-img">
+            <img src="{% static 'myapp/foto_reviews/2.jpg' %}" alt="img">
+            <figcaption>Древесный фитиль</figcaption>
+        </figure>
+        <figure class="index-figure">
+            <img src="{% static 'myapp/foto_reviews/3.jpg' %}" alt="img">
+            <figcaption>Натуральный соевый воск</figcaption>
+        </figure>
+        <figure class="index-figure two-img">
+            <img src="{% static 'myapp/foto_reviews/4.jpg' %}" alt="img">
+            <figcaption>Материалы премиум качества</figcaption>
+        </figure>
+    </div>
+    <div>
+        <p class="paragraph ozone">
+            Наши отзывы в <a
+                href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE3ODc5NzAyNTcwNzE1MTQx?story_media_id=2951127835573718529_53934061024&igsh=NDZmdmtidWpzdWx1">Instagram.</a>
+        </p>
+    </div>
+{% endblock %}

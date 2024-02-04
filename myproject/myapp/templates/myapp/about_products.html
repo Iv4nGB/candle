@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Candle Shop SPB {% endblock %}
+{% block head %}
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'myapp/index/indexICO.png' %}"/>
+{% endblock %}
+
+{% block main %}
+    <h4>
+        О нашей продукции
+    </h4>
+    <div class="flex-index index-container">
+        <figure class="index-figure">
+            <img src="{% static 'myapp/foto_about/1.jpg' %}" alt="img">
+            <figcaption>Хлопковый фитиль</figcaption>
+        </figure>
+        <figure class="index-figure two-img">
+            <img src="{% static 'myapp/foto_about/2.jpg' %}" alt="img">
+            <figcaption>Древесный фитиль</figcaption>
+        </figure>
+        <figure class="index-figure">
+            <img src="{% static 'myapp/foto_about/3.jpg' %}" alt="img">
+            <figcaption>Натуральный соевый воск</figcaption>
+        </figure>
+        <figure class="index-figure two-img">
+            <img src="{% static 'myapp/foto_about/4.jpg' %}" alt="img">
+            <figcaption>Материалы премиум качества</figcaption>
+        </figure>
+    </div>
+    <div>
+        <h4>Соевый воск</h4>
+        <p class="paragraph">
+            – это растительный продукт, который получают из масла соевых бобов.
+            После отжима масло рафинируют, осветляют и гидрируют, в результате чего оно твердеет и остается в таком
+            состоянии даже при комнатной температуре. Гидрогенизированное соевое масло и называют соевым воском.
+
+            Это вещество не содержит фосфатидов, красящих пигментов, гидрофильных и мыльных компонентов. При плавлении
+            соевый воск обретает приятную маслянистую консистенцию.
+        </p>
+    </div>
+    <br><br><br><br><br><br><br>
+{% endblock %}

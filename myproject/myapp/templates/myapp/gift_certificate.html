@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Candle Shop SPB {% endblock %}
+{% block head %}
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'myapp/index/indexICO.png' %}"/>
+{% endblock %}
+
+{% block main %}
+    <h4>
+        Подарочный сертификат
+    </h4>
+    <div class="flex-index index-container">
+        <figure class="index-figure gift-cer">
+            <img src="{% static 'myapp/foto_gift_certificate/1.jpg' %}" alt="img">
+            <figcaption></figcaption>
+        </figure>
+    </div>
+    <div>
+        <p class="paragraph ozone">
+            Подарочный сертификат на <a href="{% url 'master_class' %}">Мастер класс</a> по созданию свечи в
+            деревянной/кокосовой
+            форме.
+        </p>
+    </div>
+    <br><br><br>
+    <div class="form-group">
+        <form class="form-group" action="{% url 'gift_certificate' %}" method="post" enctype="multipart/form-data">
+            <div class="description-form">
+                <h3>
+                    Если возникли вопросы, можете заполнить форму обратной связи
+                </h3>
+            </div>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="send">
+                <input type="submit" value="Отправить">
+            </div>
+            <div class="description-order">
+                <p>
+                    * После отправки формы, наш администратор свяжется с Вами
+                </p>
+            </div>
+        </form>
+    </div>
+{% endblock %}

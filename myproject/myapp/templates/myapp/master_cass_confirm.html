@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Candle Shop SPB {% endblock %}
+{% block head %}
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'myapp/index/indexICO.png' %}"/>
+{% endblock %}
+
+{% block main %}
+    <h4>
+        Спасибо. <b>Заявка принята</b>. В ближайшее время с Вами свяжется наш менеджер.
+    </h4>
+    <div class="flex-index index-container">
+        <figure class="index-figure">
+            <img src="{% static 'myapp/foto_index/1.jpg' %}" alt="img">
+            <figcaption>Cвеча в деревянной форме</figcaption>
+        </figure>
+        <figure class="index-figure two-img">
+            <img src="{% static 'myapp/foto_index/2.jpg' %}" alt="img">
+            <figcaption>Свеча в кокосовой форме</figcaption>
+        </figure>
+        <figure class="index-figure">
+            <img src="{% static 'myapp/foto_index/3.jpg' %}" alt="img">
+            <figcaption>Формовые свечи</figcaption>
+        </figure>
+    </div>
+{% endblock %}
